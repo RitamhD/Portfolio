@@ -1,5 +1,8 @@
 body{
     height: 200vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 header{
     display: flex;
@@ -9,14 +12,13 @@ nav{
     display: flex;
     position: fixed;
     width: 100%;
-    margin: 1rem;
-    top: 0;
+    padding: 1rem;
     background-color:yellowgreen;
 }
 nav li{
     list-style: none;
 }
-nav> .left, .right{
+nav>.right, .left{
     margin-left: 1rem;
     display: flex;
     gap: 2rem;
@@ -25,4 +27,29 @@ nav> .left, .right{
 nav>.right{
     margin-left: auto;
     margin-right: 1rem;
+}
+.intro{
+    width: 45vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 150px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #10c8fb;
+    float: right;
+    margin-right: 2rem;
+}
+.intro>video{
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 20px;
+}
+@media (max-width:800px){
+    .intro{
+        width: 80%;
+        height: auto;
+    }
 }

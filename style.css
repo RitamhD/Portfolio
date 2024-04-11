@@ -2,7 +2,7 @@ body{
     height: 200vh;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 header{
     display: flex;
@@ -13,20 +13,26 @@ nav{
     position: fixed;
     width: 100%;
     padding: 1rem;
-    background-color:yellowgreen;
+    z-index: 1;
+    background-color:rgb(89, 50, 205);
 }
 nav li{
     list-style: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 nav>.right, .left{
-    margin-left: 1rem;
+    margin-left: 2rem;
     display: flex;
     gap: 2rem;
     cursor: pointer;
+    filter: invert();
+}
+li:active, #linkedin-logo:active, #github-logo:active, #home:active{
+    transform: scale(1.1);
 }
 nav>.right{
     margin-left: auto;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 .intro{
     width: 45vw;
@@ -36,7 +42,7 @@ nav>.right{
     align-items: center;
     position: relative;
     top: 150px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 10px 10px 20px #10c8fb;
     float: right;
     margin-right: 2rem;
@@ -45,7 +51,7 @@ nav>.right{
     width: 100%;
     height: auto;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 @media (max-width:800px){
     .intro{
